@@ -4,7 +4,7 @@ const projectSchema = new mongoose.Schema(
   {
     title: { type: String, required: true },
     description: { type: String },
-    tenchStack: { String },
+    techStack: { String },
     liveUrl: { type: String },
     repoUrl: { type: String },
     image: { type: String },
