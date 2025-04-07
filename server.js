@@ -3,8 +3,9 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const connectDB = require("./config/db");
 
-//Routes imports
+//Imported Routes
 const projectRoutes = require("./routes/projectRoutes");
+const SendEmailRoutes = require("./routes/emailRoute");
 
 dotenv.config();
 connectDB();
@@ -14,8 +15,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-//Project Routes
+//Routes
 app.use("/api/projects", projectRoutes);
+app.use("/api/send-email", SendEmailRoutes);
 
 app.get("/", (req, res) => {
   res.send("API is running...");
