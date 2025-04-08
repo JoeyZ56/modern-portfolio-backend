@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const sendEmail = require("../middleware/nodeMailer");
 
-router.get("/send-email", async (req, res) => {
+router.post("/", async (req, res) => {
   const { name, email, message } = req.body;
 
   try {
