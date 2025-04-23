@@ -1,5 +1,5 @@
 const express = require("express");
-// const serverless = require("serverless-http");
+const serverless = require("serverless-http");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const connectDB = require("./config/db");
@@ -25,8 +25,8 @@ app.get("/", (req, res) => {
 });
 
 //Server Start
-app.listen(PORT, () => {
-  console.log(`A wild server has appeared!`);
-});
+// app.listen(PORT, () => {
+//   console.log(`A wild server has appeared!`);
+// });
 
-// module.exports = serverless(app);
+module.exports = serverless(app);
