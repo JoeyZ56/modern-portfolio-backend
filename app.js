@@ -1,5 +1,5 @@
 const express = require("express");
-const serverless = require("serverless-http");
+// const serverless = require("serverless-http");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const connectDB = require("./config/db");
@@ -21,12 +21,12 @@ app.use("/api/projects", projectRoutes);
 app.use("/api/send-email", SendEmailRoutes);
 
 app.get("/", (req, res) => {
-  res.send("API is running...");
+  res.status(200).send("API is running...");
 });
 
-// const PORT = process.env.PORT || 4000;
-// app.listen(PORT, () => {
-//   console.log(`Server running on http://localhost:${PORT}`);
-// });
+//Server Start
+app.listen(PORT, () => {
+  console.log(`A wild server has appeared!`);
+});
 
-module.exports = serverless(app);
+// module.exports = serverless(app);
