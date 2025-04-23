@@ -9,7 +9,7 @@ const projectRoutes = require("./routes/projectRoutes");
 const SendEmailRoutes = require("./routes/emailRoute");
 
 dotenv.config();
-connectDB();
+// connectDB();
 
 const app = express();
 
