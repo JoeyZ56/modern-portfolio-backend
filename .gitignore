@@ -3,6 +3,7 @@ node_modules/
 
 # Env variables
 .env
+.vercel
 
 # Logs
 npm-debug.log*
@@ -19,3 +20,4 @@ build/
 
 # Optional: coverage tools
 coverage/
+.vercel
